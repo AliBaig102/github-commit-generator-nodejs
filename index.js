@@ -44,7 +44,7 @@ async function automateCommits() {
       const originExists = remotes.some(remote => remote.name === 'origin');
       
       if (!originExists) {
-        await git.addRemote("origin", "https://github.com/Mirza-Ali-Baig/github-nodejs.git");
+        await git.addRemote("origin", "https://github.com/AliBaig102/github-commit-generator-nodejs");
         console.log("🔗 Remote origin added");
       }
     } catch (error) {
@@ -52,7 +52,7 @@ async function automateCommits() {
     }
 
     // Push to remote
-    await git.push("origin", "main");
+    await git.push("origin", "master");
     console.log("🚀 Changes pushed to remote successfully!");
     console.log("⏰ Waiting for next cycle...\n");
 
