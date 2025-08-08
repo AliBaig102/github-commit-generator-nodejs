@@ -24,7 +24,7 @@ function getUniqueDays() {
 
   let numberOfSubtractDays;
   do {
-    numberOfSubtractDays = getRandomInt(250, 300);
+    numberOfSubtractDays = getRandomInt(200, 250);
   } while (usedDays.includes(numberOfSubtractDays));
 
   // Add the new number to usedDays
@@ -35,7 +35,7 @@ function getUniqueDays() {
 async function automateCommits() {
   try {
     // Generate random number of commits (10-20) and unique days to subtract (1-30)
-    const numberOfCommits = getRandomInt(10, 20);
+    const numberOfCommits = getRandomInt(0, 20);
     const numberOfSubtractDays = getUniqueDays();
     
     console.log(`\n🚀 Starting new cycle: ${numberOfCommits} commits, ${numberOfSubtractDays} days back`);
